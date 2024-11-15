@@ -1,13 +1,15 @@
-Web Page Musicca Project
+#Web Page Musicca Project#
 This project is a web application that utilizes SCSS for styling and Python for server-side logic. The build process is automated using a Makefile.
 
-Prerequisites
+##Prerequisites#
 Before building and running the project, ensure that the following tools are installed:
 
 Ruby (to enable SCSS compilation with sass)
 Python 3 and pip3 (for server-side development)
 GNU Make (to execute build commands)
-Project Structure
+##Project Structure#
+
+```bash
 web-page-musicca/
 ├── about.html                 # HTML file for the web page
 ├── assets/
@@ -19,22 +21,22 @@ web-page-musicca/
 ├── run_server.py              # Python script to run the server
 ├── makefile                   # Build tool configuration
 └── project-1.0.0.tar.gz       # Packaged archive (created after build)
+```
 
+##How to Build, Test, and Run#
+###1. Installing Dependencies#
+Run the following command to install all system and Python dependencies. #
+This command performs the following steps:#
+  Updates system packages#
+  Installs Ruby, Python, and pip3#
+  Installs the sass gem for SCSS compilation#
+  Installs Python packages specified in requirements.txt#
 
-How to Build, Test, and Run
-1. Installing Dependencies
-Run the following command to install all system and Python dependencies:
-This command performs the following steps:
-  Updates system packages
-  Installs Ruby, Python, and pip3
-  Installs the sass gem for SCSS compilation
-  Installs Python packages specified in requirements.txt
+###2. Compiling SCSS to CSS#
+To compile the SCSS file into a CSS file: make css#
+This command will generate the CSS file assets/stylesheets/output.css.#
 
-2. Compiling SCSS to CSS
-To compile the SCSS file into a CSS file: make css
-This command will generate the CSS file assets/stylesheets/output.css.
-
-3. Running the Server
+###3. Running the Server#
 To start the HTTP server: make server
 This runs the run_server.py script and launches the server.
 
