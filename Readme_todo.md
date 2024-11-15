@@ -41,4 +41,11 @@ Before you can build and run this project, ensure you have the following install
 ### 1. Clone the Repository  
 ```bash  
 git clone https://github.com/clarabourgeois/web-page-musicca.git  
-cd web-page-musicca  
+cd web-page-musicca
+
+### 2. Install Dependencies
+Install system dependencies, Python libraries, and SASS by running:  
+
+```bash
+make dependencies  
+  
