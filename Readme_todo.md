@@ -11,6 +11,10 @@ Ruby (to enable SCSS compilation with sass), Python 3 and pip3 (for server-side 
 web-page-musicca/
 ├── about.html                 # HTML file for the web page
 ├── assets/
+│   └── img/
+│       └── company.jpg
+│       └── mission.jpg
+│       └── musicca-logo.png
 │   └── stylesheets/
 │       └── output.css         # Compiled CSS (generated)
 ├── requirements.txt           # Python dependencies
