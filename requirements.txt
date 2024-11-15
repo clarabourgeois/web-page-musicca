@@ -1,0 +1,2 @@
+# requirements.txt
+# Add Python dependencies here if needed
