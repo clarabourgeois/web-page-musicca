@@ -1,186 +1,45 @@
-\# Musicca Web Page Project
+# Web Page Musicca Project
 
-\## Project Overview
+This project is a web application for showcasing music-related content. It uses SCSS for styling and Python for the server-side logic. The build process is automated using a `Makefile`.
 
-The \*\*Musicca Web Page Project\*\* is a static website designed to demonstrate the automation of development tasks using a \*\*Makefile\*\*. The project includes tools for:
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Project Structure](#project-structure)
+- [How to Build, Test, and Run](#how-to-build-test-and-run)
+  - [Installing Dependencies](#installing-dependencies)
+  - [Compiling SCSS to CSS](#compiling-scss-to-css)
+  - [Running the Server](#running-the-server)
+  - [Cleaning Generated Files](#cleaning-generated-files)
+- [Project Version](#project-version)
+- [Packaging](#packaging)
+- [Help](#help)
+- [Build Tool Configuration](#build-tool-configuration)
 
-- \*\*Dependency management\*\*
-- \*\*Compilation of SCSS files to CSS\*\*
-- \*\*Project versioning\*\*
-- \*\*Packaging the project into a .tar.gz archive\*\*
-- \*\*Running a Python HTTP server\*\*
+## Prerequisites
 
-This project highlights how a modern build tool can streamline the development process while meeting specific project requirements.
+Before you begin, ensure you have the following installed on your system:
 
-\---
+1. **Ruby** (to compile SCSS using `sass`)
+2. **Python 3** and `pip3` (for the server-side logic)
+3. **GNU Make** (to execute the build commands)
 
-\## Features
+## Project Structure
 
-\### Automated Tasks
+web-page-musicca/ ├── about.html ├── assets/ │ └── stylesheets/ │ └── output.css # Generated CSS file ├── requirements.txt # Python dependencies ├── style.scss # SCSS file to be compiled ├── compile_css.sh # Script to compile SCSS to CSS ├── run_server.py # Python script for running the server ├── makefile # Build tool configuration └── project-version.tar.gz # Packaged project (created via make package)
 
-The project automates the following tasks through a Makefile:
+## How to Build, Test, and Run
 
-- Installation of \*\*system and Python dependencies\*\*
-- Compilation of \*\*SCSS to CSS\*\*
-- Displaying the \*\*project version\*\*
-- Packaging the project for distribution
-- Running a local \*\*HTTP server\*\* to serve the webpage
+### Installing Dependencies
 
-\### Technology Stack
+Run the following command to install all necessary system and Python dependencies:
 
-- \*\*HTML & SCSS\*\*: Core technologies for content and styling
-- \*\*Python\*\*: Running a simple HTTP server
-- \*\*SASS\*\*: Compiling SCSS files into CSS
-- \*\*Makefile\*\*: Coordinating and automating tasks
-
-\---
-
-\## Prerequisites
-
-Ensure you have the following installed on your system:
-
-- \*\*Linux-based OS\*\* (or WSL for Windows users)
-- \*\*Python 3\*\*
-- \*\*Ruby\*\* (for SASS)
-- \*\*GNU Make\*\*
-
-\---
-
-\## How to Build, Test, and Run
-
-\### 1. Clone the Repository
-
-bash
-
-git clone https://github.com/clarabourgeois/web-page-musicca.git
-
-cd web-page-musicca
-
-2\. Install Dependencies
-
-Install system dependencies, Python libraries, and SASS by running:
-
-bash
-
-Copier le code
-
+```bash
 make dependencies
+This will:
 
-3\. Compile SCSS to CSS
-
-Generate the output.css file from the style.scss file:
-
-bash
-
-Copier le code
-
-make css
-
-4\. Run the HTTP Server
-
-Start the server to serve the webpage locally:
-
-bash
-
-Copier le code
-
-make server
-
-The server will run on http://localhost:8000. Open this URL in your browser to view the webpage.
-
-5\. Package the Project
-
-Package the project into a compressed .tar.gz archive:
-
-bash
-
-Copier le code
-
-make package
-
-The archive will be created as project-1.0.0.tar.gz in the project directory.
-
-Available Makefile Commands
-
-Command	Description
-
-make all	Install dependencies, compile SCSS, and run the server.
-
-make dependencies	Install required system and Python dependencies.
-
-make css	Compile SCSS files to CSS.
-
-make server	Run the local HTTP server.
-
-make clean	Remove the generated CSS file.
-
-make version	Display the current project version.
-
-make package	Package the project into a .tar.gz archive.
-
-make help	Display a list of available Makefile commands.
-
-Project Structure
-
-plaintext
-
-Copier le code
-
-web-page-musicca/
-
-├── assets/
-
-│   ├── img/                 # Images used in the webpage
-
-│   └── stylesheets/         # Directory for compiled CSS files
-
-├── about.html               # HTML file for the webpage
-
-├── style.scss               # SCSS file for custom styles
-
-├── compile\_css.sh           # Bash script to compile SCSS to CSS
-
-├── run\_server.py            # Python script for running the HTTP server
-
-├── requirements.txt         # Python dependencies
-
-├── makefile                 # Makefile for build automation
-
-└── project-1.0.0.tar.gz     # Packaged project (generated after `make package`)
-
-Replicability
-
-The project can be fully replicated using simple commands:
-
-make dependencies
-
-make css
-
-make server
-
-Metadata
-
-Version: 1.0.0
-
-Build Tool: GNU Make
-
-Additional Notes
-
-Dependency Details
-
-System Dependencies: Ruby (for SASS) and Python 3.
-
-Python Dependencies: Listed in requirements.txt.
-
-Future Improvements
-
-Add tests to validate SCSS compilation and server functionality.
-
-Include CI/CD pipelines for automated testing and deployment.
-
-Enhance cross-platform compatibility (e.g., support for macOS).
-
-License
-
-This project is open source and available under the MIT licence
-
+Update the system package index
+Install Ruby and Python
+Install the sass gem for SCSS compilation
+Install Python packages specified in requirements.txt
+Compiling SCSS to CSS
+To compile the SCSS file into CSS, use:
