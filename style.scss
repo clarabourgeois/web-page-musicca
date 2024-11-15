@@ -1,0 +1,135 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ebebeb ;
+    color : #1b1b1b ;
+}
+
+.container{
+    display:grid;
+    grid-template-rows: 75px 20px auto auto;
+    grid-template-columns: auto 267.5px 401.25px 401.25px auto;
+    column-gap: 20px;
+    border: grey;
+
+}
+.bande{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 75px;
+}
+.white{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: white;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+}
+.navigation1{
+    display: flex;
+    align-items: center;
+}
+.navigation2{
+    display: flex;
+    justify-self: end;
+}
+.img-musicca{
+    width: 180px;
+    height: auto;
+}
+.button1{
+    display:flex;
+    justify-content: space-evenly;
+    font-size : 14px;
+    padding: 10px 15px;
+    border-radius: 50px; /* Pour créer un effet d'ovale */
+    margin: 0 10px; /* Espacement entre les boutons */
+    text-align: center; /* Centre le texte dans le bouton */
+}
+.button1:hover {
+    background-color: #eee; /* Couleur plus foncée au survol */
+}
+.button2{
+    display:flex;
+    font-size : 14px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    margin: 0 10px;
+    text-align: center;
+    background-color: #72ac51;
+    color: white;
+}
+.button2:hover {
+    background-color: darkgreen;
+}
+.title-musicca{
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding: 30px;
+    font-size: 36px;
+    color: #565656;
+}
+.menu-item{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    height: 120px;
+}
+.item{
+    font-size: 18px;
+    padding: 10px;
+    background-color: white;
+    line-height: 30px;
+}
+.item:hover {
+    background-color: green;
+    color:white;
+}
+.title-block{
+    font-size: 20px;
+    padding: 30px 30px 20px;
+}
+.text-block{
+    padding: 0 30px 30px;
+    font-size: 15px;
+}
+.block-mission{
+    display: grid;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: white;
+
+}
+.block-company{
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: white;
+}
+
+
+a {
+    /*
+        Getting rid of default formatting for <a> elements. `inherits` tells that
+        `a` elements should use the value set on its parent for these properties.
+    */
+    text-decoration: inherit;
+    color: inherit;
+
+}
