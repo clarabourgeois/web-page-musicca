@@ -6,7 +6,7 @@ CSS_FILE = assets/stylesheets/output.css
 VERSION = 1.0.0
 
 # Default target
-all: dependencies css server
+all: dependencies clean version css server package help 
 
 # Dependency management
 dependencies:
