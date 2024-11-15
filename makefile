@@ -48,7 +48,7 @@ package:
 help:
 	@echo "Makefile for project"
 	@echo "Available commands:"
-	@echo "  make all        - Install dependencies, compile CSS, and run the server"
+	@echo "  make all        - Do all the following commands"
 	@echo "  make dependencies - Install system and Python dependencies"
 	@echo "  make css        - Compile SCSS to CSS"
 	@echo "  make server     - Run the HTTP server"
