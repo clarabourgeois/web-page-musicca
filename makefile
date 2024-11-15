@@ -6,7 +6,7 @@ CSS_FILE = assets/stylesheets/output.css
 VERSION = 1.0.0
 
 # Default target
-all: dependencies css server
+all: dependencies clean version help css server package
 
 # Dependency management
 dependencies:
@@ -48,7 +48,7 @@ package:
 help:
 	@echo "Makefile for project"
 	@echo "Available commands:"
-	@echo "  make all        - Install dependencies, compile CSS, and run the server"
+	@echo "  make all        - Do every following commands"
 	@echo "  make dependencies - Install system and Python dependencies"
 	@echo "  make css        - Compile SCSS to CSS"
 	@echo "  make server     - Run the HTTP server"
