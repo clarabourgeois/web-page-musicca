@@ -1,45 +1,66 @@
-# Web Page Musicca Project
+Web Page Musicca Project
+This project is a web application that utilizes SCSS for styling and Python for server-side logic. The build process is automated using a Makefile.
 
-This project is a web application for showcasing music-related content. It uses SCSS for styling and Python for the server-side logic. The build process is automated using a `Makefile`.
+Prerequisites
+Before building and running the project, ensure that the following tools are installed:
 
-## Table of Contents
-- [Prerequisites](#prerequisites)
-- [Project Structure](#project-structure)
-- [How to Build, Test, and Run](#how-to-build-test-and-run)
-  - [Installing Dependencies](#installing-dependencies)
-  - [Compiling SCSS to CSS](#compiling-scss-to-css)
-  - [Running the Server](#running-the-server)
-  - [Cleaning Generated Files](#cleaning-generated-files)
-- [Project Version](#project-version)
-- [Packaging](#packaging)
-- [Help](#help)
-- [Build Tool Configuration](#build-tool-configuration)
+Ruby (to enable SCSS compilation with sass)
+Python 3 and pip3 (for server-side development)
+GNU Make (to execute build commands)
+Project Structure
+web-page-musicca/
+├── about.html                 # HTML file for the web page
+├── assets/
+│   └── stylesheets/
+│       └── output.css         # Compiled CSS (generated)
+├── requirements.txt           # Python dependencies
+├── style.scss                 # SCSS file to compile
+├── compile_css.sh             # Bash script for SCSS compilation
+├── run_server.py              # Python script to run the server
+├── makefile                   # Build tool configuration
+└── project-1.0.0.tar.gz       # Packaged archive (created after build)
 
-## Prerequisites
 
-Before you begin, ensure you have the following installed on your system:
+How to Build, Test, and Run
+1. Installing Dependencies
+Run the following command to install all system and Python dependencies:
+This command performs the following steps:
+  Updates system packages
+  Installs Ruby, Python, and pip3
+  Installs the sass gem for SCSS compilation
+  Installs Python packages specified in requirements.txt
 
-1. **Ruby** (to compile SCSS using `sass`)
-2. **Python 3** and `pip3` (for the server-side logic)
-3. **GNU Make** (to execute the build commands)
+2. Compiling SCSS to CSS
+To compile the SCSS file into a CSS file: make css
+This command will generate the CSS file assets/stylesheets/output.css.
 
-## Project Structure
+3. Running the Server
+To start the HTTP server: make server
+This runs the run_server.py script and launches the server.
 
-web-page-musicca/ ├── about.html ├── assets/ │ └── stylesheets/ │ └── output.css # Generated CSS file ├── requirements.txt # Python dependencies ├── style.scss # SCSS file to be compiled ├── compile_css.sh # Script to compile SCSS to CSS ├── run_server.py # Python script for running the server ├── makefile # Build tool configuration └── project-version.tar.gz # Packaged project (created via make package)
+4. Cleaning Generated Files
+To remove the generated CSS file: make clean
+This cleans the project directory by removing output.css.
 
-## How to Build, Test, and Run
+5. Full Build Process
+To execute all necessary steps in one go: make all
 
-### Installing Dependencies
+6. Displaying the Project Version
+To check the current project version: make version
+The current version is defined as 1.0.0 in the Makefile.
 
-Run the following command to install all necessary system and Python dependencies:
+7. Packaging the Project
+To package the project into a tarball (.tar.gz): make package
+This creates a file named project-1.0.0.tar.gz containing all essential project files.
 
-```bash
-make dependencies
-This will:
+8. Help
+For a summary of available commands, use: make help
+This will display detailed usage information.
 
-Update the system package index
-Install Ruby and Python
-Install the sass gem for SCSS compilation
-Install Python packages specified in requirements.txt
-Compiling SCSS to CSS
-To compile the SCSS file into CSS, use:
+Build Automation Details
+The project uses a Makefile to automate various tasks, including:
+Dependency Management: Installs system dependencies (Ruby, Python) and Python libraries from requirements.txt.
+SCSS Compilation: Compiles the style.scss file into CSS using a Bash script (compile_css.sh).
+Server Management: Runs the server script (run_server.py).
+Project Versioning: Uses a VERSION variable to display and manage project versioning.
+Packaging: Creates a compressed .tar.gz archive containing all project files.
