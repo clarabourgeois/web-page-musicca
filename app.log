@@ -1,0 +1,41 @@
+2024-12-10 18:08:11,651 - INFO - Starting server on default port: 8000
+2024-12-10 18:08:11,651 - INFO - Initializing server...
+2024-12-10 18:08:11,653 - INFO - Starting http server on port 8000...
+
+2024-12-10 18:08:18,772 - WARNING - Server interrupted by user
+2024-12-10 18:08:18,773 - INFO - Stopping httpd...
+
+2024-12-10 18:10:22,207 - INFO - Starting server on default port: 8000
+2024-12-10 18:10:22,207 - INFO - Initializing server...
+2024-12-10 18:10:22,209 - INFO - Starting http server on port 8000...
+
+2024-12-10 18:10:43,450 - INFO - GET request,
+Path: /
+Headers:
+Host: localhost:8000
+User-Agent: curl/7.81.0
+Accept: */*
+
+
+
+2024-12-10 18:11:10,981 - DEBUG - Processing POST request for path: /register
+2024-12-10 18:11:10,981 - DEBUG - Received POST data: username=admin@domain.com&password=rainbow
+2024-12-10 18:11:10,981 - INFO - POST request,
+Path: /register
+Headers:
+Host: localhost:8000
+User-Agent: curl/7.81.0
+Accept: */*
+Content-Length: 42
+Content-Type: application/x-www-form-urlencoded
+
+
+
+Body:
+username=admin@domain.com&password=rainbow
+
+2024-12-10 18:11:10,982 - DEBUG - Response set with 200 status code
+2024-12-10 18:11:10,982 - INFO - Registration successful for admin user
+2024-12-10 18:11:37,557 - WARNING - Server interrupted by user
+2024-12-10 18:11:37,558 - INFO - Stopping httpd...
+
