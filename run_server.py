@@ -69,6 +69,10 @@ class S(SimpleHTTPRequestHandler):
                 <h1>Congrats, you succeeded to submit the correct data</h1>
                 """.encode('utf-8'))
         else:
+            # CRITICAL si une tentative incorrecte est détectée
+            logging.critical("""
+                             CRITICAL ERROR: Unauthorized access attempt for path %s. Post data: %s
+                             """, self.path, post_data.decode('utf-8'))
             logging.warning("Bad request received for path %s", self.path)
             self.wfile.write("""
                 <h1>Error : Bad Request</h1> POST request for {self.path}<br> Body : <br> {post_data.decode('utf-8')}
