@@ -1,17 +1,22 @@
-- repo: https://github.com/pre-commit/mirrors-pylint
-  rev: v2.15.0
-  hooks:
-    - id: pylint
-      name: Pylint
-      entry: pylint
-      language: python
-      files: \.py$
+# .pre-commit-config.yaml
 
-- repo: https://github.com/HTMLHint/HTMLHint.git
-  rev: v0.15.0
-  hooks:
-    - id: htmlhint
-      name: HTMLHint
-      entry: htmlhint
-      language: node
-      files: \.html$
+# Liste des dépôts (repos) contenant les hooks
+repos:
+  - repo: local
+    hooks:
+      - id: pylint  # Le hook que nous voulons utiliser
+        name: Pylint
+        entry: pylint
+        language: system
+        types: [python]
+        files: \.py$  # Ce hook ne s'exécute que sur les fichiers .py
+
+  - repo:  local
+    hooks:
+      - id: htmlhint  # Le hook que nous voulons utiliser
+        name: HTMLHint
+        entry: pylint
+        language: system
+        types: [text]
+        files: \.html$  # Ce hook ne s'exécute que sur les fichiers .html
+

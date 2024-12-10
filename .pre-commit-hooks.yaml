@@ -1,0 +1,13 @@
+- id: pylint
+  name: Run pylint on Python files
+  entry: pylint
+  language: system
+  files: \.py$
+  description: This hook runs pylint to check for Python code quality.
+
+- id: htmlhint
+  name: Run HTMLHint on HTML files
+  entry: htmlhint
+  language: system
+  files: \.html$
+  description: This hook runs HTMLHint to check for HTML code quality.
