@@ -6,7 +6,7 @@
   description: This hook runs pylint to check for Python code quality.
 
 - id: htmlhint
-  name: Run HTMLHint on HTML files
+  name: HTMLHint
   entry: htmlhint
   language: system
   files: \.html$
