@@ -1,7 +1,7 @@
 # Module docstring
 """
 Test the functionality of the SCSS compilation process using the script 'compile_css.sh'.
-The test verifies if the output CSS file is generated after the compilation process.
+The test verifies if the output CSS file is generated after the compilation process.    
 """
 
 import unittest
