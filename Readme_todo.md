@@ -17,15 +17,23 @@ web-page-musicca/
 │       └── musicca-logo.png
 │   └── stylesheets/
 │       └── output.css         # Compiled CSS (generated)
+├── tests/
+│   └── test_compile_css.py    # Unit test for compile_css.sh
+│   └── test_run_server.py     # Unit test for run_server.py
 ├── requirements.txt           # Python dependencies
 ├── style.scss                 # SCSS file to compile
 ├── compile_css.sh             # Bash script for SCSS compilation
 ├── run_server.py              # Python script to run the server
 ├── makefile                   # Build tool configuration
+├── .pre-commit-config.yaml    # File to automate static analysis 
+├── .pre-commit-hooks.yaml     # File to automate static analysis 
+├── .pylintrc                  # Static analysis for python files
+├── .htmlhintrc                # Static analysis for HTML files
+├── LICENSE                    # License of the project 
 └── project-1.0.0.tar.gz       # Packaged archive (created after build)
 ```
 
-## How to Build, Test, and Run #
+## Functionalities #
 ### 1. Installing Dependencies #
 Run the following command to install all system and Python dependencies.  
 This command performs the following steps:  
@@ -60,6 +68,26 @@ This creates a file named project-1.0.0.tar.gz containing all essential project 
 ### 8. Help
 For a summary of available commands, use: make help  
 This will display detailed usage information.  
+
+### 9. Static Analysis 
+This project use pylint and htmlhint for static analysis. Be sure to installed these 2 tools with the following commands: 
+```bash
+pip install pylint
+npm install -g htmlhint
+pip install pre-commit
+pre-commit install
+```
+Commit your changes, this will automate the static analysis for python or html files.
+
+### 10. Unit Test 
+To use the files in the directory tests, which do unit test for some functions in the files run_server.py and compile_css.sh, do the following commands: 
+```bash
+python3 -m unittest tests/test_run_server.py
+python3 -m unittest tests/test_compile_css.py
+```
+
+### 11. License 
+This project use the MIT License. It is in the file "LICENSE". 
 
 ## Metadata
 Version: 1.0.0  
