@@ -32,6 +32,13 @@ web-page-musicca/
 ├── LICENSE                    # License of the project 
 └── project-1.0.0.tar.gz       # Packaged archive (created after build)
 ```
+## Getting the webpage running #
+
+- You need to run a small web server, use the script `./run_server.py` at the root of the repository. It uses 
+  python 3, make sure you have python 3 installed on you machine.
+- Run the `./compile_css.sh` script to transform the SCSS source into CSS
+- Access your webpage with the URLs http://localhost:8000/integration/about.html 
+
 
 ## Functionalities #
 ### 1. Installing Dependencies #
