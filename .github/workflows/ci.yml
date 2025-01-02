@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         language: [python, java]
-        version: [3.8, 3.9, 3.10]  # Versions de Python
+        version: [3.10]  # Utilisation uniquement de Python 3.10
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -29,7 +29,7 @@ jobs:
         if: ${{ matrix.language == 'java' }}
         uses: actions/setup-java@v3
         with:
-          distribution: 'zulu'  # Alternative : utilisez 'adopt' si nécessaire
+          distribution: 'zulu'  # Alternative : utilisez 'adopt' ou 'temurin' si nécessaire
           java-version: '21.0.4'
 
       - name: Install Python dependencies
