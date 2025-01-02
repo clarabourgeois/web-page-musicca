@@ -39,6 +39,8 @@ web-page-musicca/
 - Run the `./compile_css.sh` script to transform the SCSS source into CSS
 - Access your webpage with the URLs http://localhost:8000/integration/about.html 
 
+## Build Status #
+![Build and Test Matrix](https://github.com/clarabourgeois/web-page-musicca/actions/workflows/ci.yml/badge.svg)
 
 ## Functionalities #
 ### 1. Installing Dependencies #
