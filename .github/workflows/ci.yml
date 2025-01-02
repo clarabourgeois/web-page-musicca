@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        language: [python, java, go]
+        language: [python, java]
         version: [3.8, 3.9, 3.10]
     steps:
       - name: Checkout repository
@@ -32,12 +32,6 @@ jobs:
           distribution: 'adopt'
           java-version: ${{ matrix.version }}
 
-      - name: Set up Go
-        if: ${{ matrix.language == 'go' }}
-        uses: actions/setup-go@v4
-        with:
-          go-version: ${{ matrix.version }}
-
       - name: Install Python dependencies
         if: ${{ matrix.language == 'python' }}
         run: |
@@ -53,8 +47,3 @@ jobs:
         if: ${{ matrix.language == 'java' }}
         run: |
           echo "Build and test Java"
-
-      - name: Build and test Go
-        if: ${{ matrix.language == 'go' }}
-        run: |
-          echo "Build and test Go"
