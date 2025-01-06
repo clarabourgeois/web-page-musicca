@@ -37,7 +37,7 @@ web-page-musicca/
 - You need to run a small web server, use the script `./run_server.py` at the root of the repository. It uses 
   python 3, make sure you have python 3 installed on you machine.
 - Run the `./compile_css.sh` script to transform the SCSS source into CSS
-- Access your webpage with the URLs http://localhost:8000/integration/about.html 
+- Access your webpage with the URLs http://localhost:8000/about.html 
 
 ## Build Status #
 ![Build and Test Matrix](https://github.com/clarabourgeois/web-page-musicca/actions/workflows/ci.yml/badge.svg)
