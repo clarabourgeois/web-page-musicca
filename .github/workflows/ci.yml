@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         language: [python, java]
-        version: [3.10.12]
+        version: [3.10.12, 21.0.4]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -37,16 +37,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Install Sass
+        run: npm install -g sass
+
       - name: Compile SCSS
-        run: sass path/to/input.scss:path/to/output.css
+        run: sass web-page-musicca/style.scss:assets/stylesheets/output.css
 
       - name: Run Python tests
-        if: ${{ matrix.language == 'python' }}
         run: |
-          python -m unittest discover tests
+          python3 -m unittest discover tests
 
       - name: Build and test Java
-        if: ${{ matrix.language == 'java' }}
         run: |
           echo "Building and testing Java"
           javac -version
