@@ -3,17 +3,33 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - master  # Déclenche le workflow uniquement sur la branche master
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
+      # Checkout du code de la branche master
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Installation de dépendances si nécessaire (par exemple, pour générer de la documentation avec MkDocs, Sphinx, etc.)
+      - name: Install dependencies
+        run: |
+          # Ajoutez ici les commandes pour installer vos dépendances
+          # Exemple : npm install ou pip install -r requirements.txt
+
+      # Générer la documentation (si nécessaire)
+      - name: Build documentation
+        run: |
+          # Ajoutez ici les commandes pour générer la documentation
+          # Exemple pour MkDocs : mkdocs build
+          # Exemple pour Sphinx : sphinx-build -b html sourcedir builddir
+
+      # Déploiement sur GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs  # Le dossier contenant les fichiers générés à publier (ajuste le chemin selon ton projet)
