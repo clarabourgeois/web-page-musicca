@@ -1,3 +1,4 @@
 # requirements.txt
 # Add Python dependencies here if needed
 pre-commit
+requests

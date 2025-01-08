@@ -210,3 +210,24 @@ Accept-Language: fr,fr-FR;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,es-ES;q=0.5,es;
 2025-01-06 15:53:09,500 - WARNING - Server interrupted by user
 2025-01-06 15:53:09,500 - INFO - Stopping httpd...
 
+2025-01-08 18:42:12,240 - INFO - Initializing server...
+2025-01-08 18:42:12,251 - DEBUG - Starting new HTTP connection (1): localhost:8081
+2025-01-08 18:42:12,251 - INFO - Starting http server on port 8081...
+
+2025-01-08 18:42:12,255 - INFO - GET request,
+Path: /
+Headers:
+Host: localhost:8081
+User-Agent: python-requests/2.32.3
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+
+
+
+2025-01-08 18:42:12,256 - DEBUG - http://localhost:8081 "GET / HTTP/1.1" 200 1591
+2025-01-08 18:42:12,257 - DEBUG - Starting new HTTP connection (1): localhost:8081
+2025-01-08 18:42:12,258 - DEBUG - http://localhost:8081 "POST / HTTP/1.1" 501 497
+2025-01-08 18:42:17,260 - INFO - Initializing server...
+2025-01-08 18:42:17,261 - DEBUG - Starting new HTTP connection (1): localhost:8081
+2025-01-08 18:42:17,274 - DEBUG - http://localhost:8081 "POST / HTTP/1.1" 501 497
