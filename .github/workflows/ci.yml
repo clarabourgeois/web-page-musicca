@@ -37,12 +37,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Install Sass
-        run: npm install -g sass
-
-      - name: Compile SCSS
-        run: sass web-page-musicca/style.scss:assets/stylesheets/output.css
-
       - name: Run Python tests
         run: |
           python3 -m unittest discover tests
