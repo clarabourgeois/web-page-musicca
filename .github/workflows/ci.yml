@@ -41,7 +41,9 @@ jobs:
         run: npm install -g sass
 
       - name: Compile SCSS
-        run: sass ../../style.scss:../../assets/stylesheets/output.css
+        run:  |
+          sass style.scss:assets/stylesheets/output.css
+        working-directory: ${{ github.workspace }}
 
       - name: Run Python tests
         run: |
