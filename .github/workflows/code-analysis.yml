@@ -37,6 +37,9 @@ jobs:
       - name: Install htmlhint
         run: npm install -g htmlhint
 
+      - name: Compile SCSS
+        run: sass path/to/input.scss:path/to/output.css
+
       - name: Run htmlhint
         run: htmlhint about.html
 
